@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Day-9</title>
+</head>
+<body>
+    <div class="check">
+        <p id="test">Lorem ipsum dolor sit amet.</p>
+        <p class="test-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, culpa!</p>
+
+        <ul id="mylist">
+            <li>JavaScript</li>
+        </ul>
+    </div>
+</body>
+<script>
+//    Activity 1: Selecting and Manipulation Elements
+    document.getElementById('test').innerHTML="Hii this is ishant "
+    let element=document.getElementsByClassName('test-2')
+    for(let i=0;i<element.length;i++){
+        element[i].innerHTML="welcome! i am doing 30-day-javascript challange"
+    }
+
+    // Activity 2: Creating and Appending Elements
+    let newDiv=document.createElement('div')
+
+    newDiv.textContent="hello world! Learn JavaScript"
+    document.body.appendChild(newDiv)
+
+    let newli=document.createElement('li')
+    newli.textContent='C++'
+    document.getElementById('mylist').appendChild(newli)
+
+    // Activity 3: Removing elements
+    let removedel=document.getElementById('test')
+    removedel.remove()
+
+    let myl=document.getElementById('mylist')
+    myl.removeChild(myl.lastElementChild)
+
+
+</script>
+</html>
